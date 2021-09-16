@@ -3,5 +3,5 @@ each_cons = ->(ary) {
 }
 pascal = ->(n) {n.zero? ? [1] : [1] + each_cons.(pascal.(n - 1)) + [1]}
 
-n = 10  #三角形の階層
+n = 100  #三角形の階層
 n.times {|i| puts pascal.(i).join(" ").center(30)}
